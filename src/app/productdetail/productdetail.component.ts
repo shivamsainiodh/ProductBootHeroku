@@ -8,7 +8,7 @@ import { ProductService } from '../product.service';
   styleUrls: ['./productdetail.component.css']
 })
 export class ProductdetailComponent implements OnInit {
-  currentProduct = null;
+  currentProduct:any;
   message = '';
 
   constructor(
@@ -21,7 +21,7 @@ export class ProductdetailComponent implements OnInit {
     this.getProduct(this.route.snapshot.paramMap.get('id'));
   }
 
-  getProduct(id): void {
+  getProduct(id: string | null): void {
     this.productService.get(id)
       .subscribe(
         data => {

@@ -14,19 +14,19 @@ export class ProductService {
     return this.http.get(`${baseUrl}/products`);
   }
 
-  get(id): Observable<any> {
+  get(id: any): Observable<any> {
     return this.http.get(`${baseUrl}/productById/${id}`);
   }
 
-  create(data): Observable<any> {
+  create(data: { name: string; quantity: number; price: number; }): Observable<any> {
     return this.http.post(`${baseUrl}/addProduct`, data);
   }
 
-  update(id, data): Observable<any> {
+  update(id: any, data: null): Observable<any> {
     return this.http.put(`${baseUrl}/update/${id}`, data);
   }
 
-  delete(id): Observable<any> {
+  delete(id: any): Observable<any> {
     return this.http.delete(`${baseUrl}/delete/${id}`);
   }
 }

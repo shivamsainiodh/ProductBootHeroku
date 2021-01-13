@@ -40,7 +40,7 @@ export class ProductlistComponent implements OnInit {
     this.currentIndex = -1;
   }
 
-  setActiveproduct(product, index): void {
+  setActiveproduct(product: null, index: number): void {
     this.currentproduct = product;
     this.currentIndex = index;
   }
