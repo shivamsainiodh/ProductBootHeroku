@@ -8,7 +8,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductlistComponent implements OnInit {
   products: any;
-  currentproduct = null;
+  currentproduct : any;
   currentIndex = -1;
   name = '';
 
